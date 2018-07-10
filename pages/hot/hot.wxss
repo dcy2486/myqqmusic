@@ -1,0 +1,25 @@
+.content{
+  padding: 30rpx 20rpx;
+}
+.content .title{
+  font-size: 28rpx;
+  color: #777;
+}
+.content .selection{
+  display: flex;
+  margin-top: 30rpx;
+}
+.content .selection .number{
+  font-size: 32rpx;
+  color: #FF400B;
+  align-self: center;
+  margin: 0rpx 30rpx;
+}
+.content .selection .right view:nth-child(1){
+font-size: 32rpx;
+color: #000;
+}
+.content .selection .right view:nth-child(2){
+font-size: 28rpx;
+color: #777;
+}

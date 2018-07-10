@@ -1,0 +1,17 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/hot/hot",
+    "pages/paihan/paihan",
+    "pages/pay/pay",
+    "pages/playsong/playsong",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#31c27c",
+    "navigationBarTitleText": "QQ音乐",
+    "navigationBarTextStyle": "#fff"
+  }
+}

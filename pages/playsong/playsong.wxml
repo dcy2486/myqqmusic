@@ -1,0 +1,29 @@
+<view class='body'>
+  <view class='head'>
+     <image src="{{imageurl}}" class='logo'></image>
+    <view >
+      <text>{{musicList.songname}}</text>
+      <text class='ming' wx:for="{{musicList.singer}}">{{item.name}}</text>
+    </view>
+    <image bindtap='bofan'  class="play" src="{{off?'/images/icon-pause.png':'/images/icon-play.png'}}" class='zhant' ></image>
+  </view>
+  <view class='lyic'>
+    <scroll-view scroll-y>
+      <view class='text'>
+      <view wx:for="{{lyc}}">{{item}}</view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+<view class='jdt'>
+  <view class='current text'>
+  {{currenPosition%60>=1?curM:"0"}}
+   {{currenPosition<=60?"0":""}}:{{currenPosition%60<10?"0":""}}{{currenPosition%60}}
+  </view>
+  <view class='bar-yeye' bindtouchmove="ctrplaymusic" bindtouchend="nv66">
+  <view class='bar'>
+    <view class='bar-child' style="width: {{eleWidth}}%"></view>
+  </view>
+  </view>
+  <view class='end text'>{{m}}:{{s}}</view>
+</view>

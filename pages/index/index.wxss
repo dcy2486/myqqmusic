@@ -1,0 +1,235 @@
+/* qq音乐图标 */
+.logo{
+  display: flex;
+
+  background-color: #31c27c;
+  justify-content: space-between
+}
+.logo image{
+  width: 180rpx;
+  height: 50rpx;
+  margin-left: 20rpx;
+  align-self: center;
+}
+.logo text{
+font-size: 28rpx;
+color: white;
+padding: 10rpx 24rpx;
+background-color: #149c5a;
+border-radius: 99rpx;
+margin: 20rpx 0rpx;
+margin-right: 20rpx;
+}
+
+/* 导航 */
+.nav{
+  display: flex;
+  background-color: white
+}
+.nav text{
+  flex: auto;
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 32rpx;
+  color: #757980;
+}
+.nav text.cur{
+  color: #22c275;
+  border-bottom: 4rpx solid #22c275;
+}
+
+/* 轮播图 */
+.lunbo swiper swiper-item image{
+  width: 100%;
+  height: 100%
+}
+.lunbo swiper{
+  height: 300rpx;
+}
+.container .main{
+  padding: 40rpx 20rpx;
+}
+
+/* 首页 */
+.container .main .title{
+  font-size: 34rpx;
+  margin-bottom: 20rpx;
+  text-align: left;
+  color: #000;
+}
+.container .main .item image{
+  width: 347rpx;
+  height: 347rpx;
+}
+.container .main .item{
+  display: flex;
+  width: calc(50% - 5rpx);
+  flex-direction: column;
+  margin-bottom: 40rpx;
+  margin-top: 20rpx;
+  background-color: white;
+}
+.container .main .warp{
+  display: flex;
+  justify-content: space-between;
+}
+.container .main .item .text{
+font-size: 26rpx;
+margin-bottom: 20rpx;
+}
+.container .f2 .warp{
+  flex-wrap: wrap;
+}
+.container .f2 .item .text{
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+/* 排行 */
+.paih .warp{
+  padding: 30rpx 20rpx;
+}
+.paih .warp .item{
+  display: flex;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.paih .warp .item image{
+  flex: 0 0 200rpx;
+  width: 200rpx;
+  height: 200rpx;
+}
+.paih .warp .item .right{
+  flex: auto;
+  padding-left: 30rpx;
+  overflow: hidden; 
+}
+.paih .warp .item .right .title{
+  font-size: 34rpx;
+}
+.paih .warp .item .right .fbiao{
+  color: #979797;
+  padding-right: 10rpx;
+}
+.paih .warp .item .right .right-warp{
+
+  font-size: 32rpx;
+   overflow: hidden;
+}
+.paih .warp .item .right .right-warp text{
+white-space: nowrap;
+}
+.paih .arow{
+  color:  #979797;
+  align-self: center;
+}
+.footer{
+  text-align: center;
+}
+.footer .f1{
+font-size: 28rpx;
+color: #979797;
+margin-bottom: 20rpx;
+}
+.footer .f2{
+  font-size: 28rpx;
+  margin: 20rpx 0rpx;
+}
+.footer .f3{
+  width: 160rpx;
+  height: 40rpx
+}
+.footer text{
+  display: block;
+  font-size: 20rpx;
+  color: #979797
+}
+.f1{
+font-size: 28rpx;
+color: #979797;
+text-align: center
+}
+
+/* 搜索 */
+.b1{
+  display: flex;
+  height: 72rpx;
+  background-color: white;
+  margin:20rpx 20rpx;
+  border-radius: 10rpx;
+}
+.b1 image{
+  align-self: center;
+  width: 36rpx;
+  height: 36rpx;
+  margin: 0rpx 10rpx
+}
+.b1 input{
+ height: 40rpx;
+ font-size: 26rpx;
+ align-self: center;
+ width: 100%
+}
+
+/* 随机七个标签 */
+.suiji{
+  margin: 20px;
+}
+.suiji .resou{
+  font-size: 30rpx;
+}
+.suiji .wa{
+  display: inline-block;
+  border: 1px solid rgba(0,0,0,.6);
+  padding: 0rpx 25rpx;
+  font-size: 28rpx;
+  border-radius: 99rpx;
+  margin-bottom: 20rpx;
+  margin-right: 28rpx;
+}
+.sous .result{
+  background-color: #fff;
+}
+.sous .result text{
+  display: block;
+  padding: 30rpx 0rpx 10rpx 0rpx;
+  padding-left: 30rpx;
+  font-size: 28rpx;
+}
+.sous .result view{
+  margin-left: 50rpx;
+  font-size: 26rpx;
+  color: #979797;
+  margin-bottom: 10rpx;
+}
+.sous .result .item{
+  display: flex;
+  justify-content: space-between;
+}
+.sous  .result .item + .item{
+  border-top: 1rpx solid #ccc; 
+}
+
+/* 后面加的清除符号 */
+.x{
+  margin-right: 30rpx;
+}
+
+/* 后面加的搜索完成的图片 */
+.result .xiahua{
+  border-bottom: 1px solid #ccc;
+}
+.result .xiahua image{
+  position: absolute;
+  left: 20rpx;
+  top: 30rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+.result .xiahua text{
+  margin-left: 100rpx;
+}
+.result .xiahua view{
+    margin-left: 150rpx;
+}

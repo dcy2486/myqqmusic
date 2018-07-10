@@ -1,0 +1,12 @@
+<view class='content'>
+  <view class='title'>排行榜 共{{songmusic.length}}首</view>
+  <view class='selection' bindtap='openPlaymusic' data-songid='{{index}}' wx:for="{{songmusic}}">
+    <view class='number'>{{index+1}}</view>
+    <view class='right'>
+      <view>{{item.data.songname}}</view>
+      <view>
+        <text wx:for="{{item.data.singer}}">{{item.name}} </text>
+      </view>
+    </view>
+  </view>
+</view>

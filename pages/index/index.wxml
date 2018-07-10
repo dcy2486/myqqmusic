@@ -1,0 +1,98 @@
+<view class='logo'>
+  <image src='/images/logo.png'></image>
+  <text>下载APP</text>
+</view>
+<view class='nav'>
+  <text class='{{curNum == index ? "cur" : ""}}' wx:for="{{nav}}"
+  data-navindex="{{index}}"
+  bindtap='tabnav'>{{item}}</text>
+</view>
+<!-- 推荐 -->
+<view class='tuijian' hidden='{{curNum !==0}}'>
+    <view class='lunbo'>
+    <swiper indicator-dots="{{indicatorDots}}" indicator-active-color="{{indicatorcolor}}" autoplay="{{autoplay}}">
+       <swiper-item wx:for="{{imgsdata.slider}}">
+      <image src="{{item.picUrl}}" class="slide-image"/>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class='container'>
+    <view class='f1 main'>
+      <view class='title'>电台</view>
+      <view class='warp'>
+      <view class='item' bindtap='zhaopai' data-radioid="{{item.radioid}}" wx:for="{{imgsdata.radioList}}">
+        <image class='i1' src='{{item.picUrl}}'></image>
+        <text class='text'>{{item.Ftitle}}</text>
+        </view>
+      </view>
+    </view>
+     <view class='f2 main'>
+      <view class='title'>热门歌单</view>
+      <view class='warp'>
+      <view class='item' bindtap='hotmusic' data-id="{{item.id}}" wx:for="{{imgsdata.songList}}">
+        <image class='i1' src='{{item.picUrl}}'></image>
+        <text class='text'>{{item.songListDesc}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='footer'>
+  <view class='f1'>去客户端发现更多好音乐></view>
+  <view class='f2'>查看电脑版网页</view>
+  <image class='f3' src='/images/logo_footer.png'></image>
+  <text class='f4'>Copyright © 1998 -2017 Tencent. All Rights Reserved.</text>
+  <text class='f5'>联系电话：0755-86013388 QQ群：55209235</text>
+  </view>
+</view>
+
+<!-- 排行榜 -->
+<view class='paih' hidden='{{curNum !==1}}'>
+  <view class='warp'>
+    <view class='item' bindtap='opentoplist' data-topid="{{item.id}}" wx:for="{{topList}}">
+      <image src='{{item.picUrl}}'></image>
+      <view class='right'>
+        <text class='title'>{{item.topTitle}}</text>
+        <view class='right-warp' wx:for="{{item.songList}}">
+          <text class='fbiao'>{{index+1}}</text>
+          <text>{{item.songname}}</text>
+          <text class='fbiao'>-{{item.singername}}</text>
+        </view>
+      </view>
+      <text class='arow'>></text>
+    </view>
+  </view>
+  <view class='f1'>去客户端发现更多好音乐 ></view>
+</view>
+
+<!-- 收缩 -->
+<view class='sous' hidden='{{curNum !==2}}'>
+  
+    <view class='b1'>
+    <image src='/images/1.png'></image>
+    <input class="input" bindconfirm="searchSubmit"  placeholder="搜索歌单、歌曲、专辑" bindfocus="getfoucus" bindinput="searchInput" />
+    </view>
+
+  <view class='suiji' hidden='{{searchVal || foucus}}'>
+    <view class='resou'>热门搜索</view>
+    <view class='wa' wx:for="{{sousuode}}">{{item.k}}</view>
+  </view>
+
+    <!--搜索列表  -->
+    <view class='result' hidden='{{searchBackFlag}}'>
+      <scroll-view class='xiahua' data-playid="{{index}}" bindtap='playm'  wx:for="{{searchList}}">
+      <image src='/images/icon-music.png'></image>
+        <text>{{item.songname}}</text>
+        <view wx:for="{{item.singer}}">-{{item.name}}</view>
+      </scroll-view>
+    </view>
+
+      <!--搜索记录   当有搜索结果的时候我就消失 -->
+  <view class='result' hidden='{{!searchBackFlag || !foucus}}'>
+    <view  class='item' wx:for="{{searchstort}}">
+       <text data-value="{{item}}" bindtap='storeSearchreSult'>{{item}}</text>
+      <text data-storeId="{{index}}" bindtap='clolseStore' class='x'>x</text>
+    </view>
+  </view>
+</view>
+

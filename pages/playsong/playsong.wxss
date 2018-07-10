@@ -1,0 +1,76 @@
+page{
+  width: 100%;
+  height: 100%;
+  background: #999999;
+}
+
+/* 头部样式 */
+.head{
+  display: flex;
+  width: 100%;
+  height: 180rpx;
+  background-color: #808080;
+  
+}
+.head .logo{
+  width: 120rpx;
+  height: 120rpx;
+  align-self: center;
+  padding: 20rpx;
+}
+.head .zhant{
+  width: 90rpx;
+  height: 90rpx;
+  position: absolute;
+  right: 40rpx;
+  top:40rpx;
+}
+.head text{
+  width: 500rpx;
+  display: block;
+  margin-top: 30rpx;
+  color: white;
+  white-space:nowrap;
+}
+.head .ming{
+  font-size: 30rpx;
+}
+
+/* 歌词和进度条 */
+.lyic scroll-view{
+  height: 600rpx;
+}
+.lyic scroll-view .text{
+  padding: 20rpx 50px;
+  display: block;
+}
+.jdt{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+.jdt .text{
+  font-size: 30rpx;
+  color: #fff;
+}
+.jdt .text.current{
+  margin-right: 20rpx;
+}
+.jdt .text.end{
+  margin-left: 20rpx;
+}
+.jdt .bar-yeye{
+  flex: auto;
+  height:50rpx;
+}
+.jdt .bar{
+  width:100%;
+  height: 5rpx;
+  background: #777;
+  margin-top:23rpx;
+}
+.jdt .bar .bar-child{
+  width: 0%;
+  height: 100%;
+  background: #31c27c;
+}
